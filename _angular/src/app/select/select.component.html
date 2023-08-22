@@ -1,0 +1,13 @@
+<div class="input-container">
+  <label for="{{ name }}">{{ label }}</label>
+  <select
+    [id]="name"
+    [name]="name"
+    (change)="handleChange($event)"
+    [(ngModel)]="selectedValue"
+  >
+    <option *ngFor="let option of options" [value]="option">
+      {{ option }}
+    </option>
+  </select>
+</div>

@@ -1,0 +1,18 @@
+<div>
+  <app-select
+    [value]="framework"
+    name="framework"
+    label="Framework"
+    [options]="['react', 'vue', 'angular']"
+    (valueChange)="handleChange($event, 'framework')"
+  />
+  <app-select
+    [value]="status"
+    name="status"
+    label="Status"
+    [options]="['good', 'ok', 'bad']"
+    (valueChange)="handleChange($event, 'status')"
+  />
+  <pre>framework: {{ framework }}</pre>
+  <pre>status: {{ status }}</pre>
+</div>
